@@ -31,17 +31,17 @@ module TicTacToe
     end
 
     def winner?
-      winning_positions.each do |winning_positions|
-        next if winning_positions_values(winning_position).all_empty?
-        return true if winning_positions_values(winning_position).all_same?
+      winning_positions.each do |winning_position|
+        next if winning_position_values(winning_position).all_empty?
+        return true if winning_position_values(winning_position).all_same?
       end
       false
     end
 
-    def winning_positions_values(winning_postion)
+    def winning_position_values(winning_position)
       winning_position.map {|cell| cell.value}
     end
-    
+
     def winning_positions
       grid +            #collect rows
       grid.transpose +  #collect columns
