@@ -44,13 +44,13 @@ describe Array do
   end 
 
   context "#none_empty?" do
-    it "returns true if all elements in the Array are filled" do
+    it "returns true if all elements in the Array are not empty" do
       expect(["X","X","X"].none_empty?).to be_true
     end
 
 
-    it "returns false if a element is not empty" do
-      expect(["","X",""].none_empty?).to be_false
+    it "returns false if all elements are empty" do
+      expect(["","",""].none_empty?).to be_false
     end
 
     it "returns true for an empty Array" do
