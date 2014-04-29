@@ -27,11 +27,21 @@ module TicTacToe
       end
 
       it "will set @other_player to @current_player" do
-        game- Game.new([bob, frank])
+        game= Game.new([bob, frank])
         current_player = game.current_player
         game.switch_players
         expect(game.other_player).to eq current_player
       end 
     end
+
+    context "#solicit_move" do
+      it "asks the player to select a number" do
+        game = Game.new([bob, frank])
+        game.stub(:current_player) {bob}
+        expected = "bob: Enter a number between 1 and 9 to make your move" 
+        expect(game.solicit_move).to eq expected
+      end
+    end
+
   end
 end
