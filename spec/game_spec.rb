@@ -10,6 +10,12 @@ module TicTacToe
         game = Game.new([bob, frank])
         expect(game.current_player).to eq frank
       end
-      
+
+      it "randomly selects another player" do
+        Array.any_instance.stub(:shuffle) {[Frank, bob]}
+        game = Game.new([bob, frank])
+        expect(game.other_player).to eq bob  
+      end
     end
+  end
 end
