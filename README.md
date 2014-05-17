@@ -1,7 +1,7 @@
 # TicTacToe
 
 ###Task: 
-To create a fully tested (using RSpec) command line Tic-Tac-Toe game using Ruby.
+Followed the tutorial provided by:http://codequizzes.wordpress.com to create a fully tested (using RSpec) command line Tic-Tac-Toe game using Ruby.
 
 ###Status Update:
 - Class Board   (completed)
